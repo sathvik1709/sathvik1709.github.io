@@ -13,16 +13,23 @@ html, body{
 
 #projects {
      width: 100%;
-    height: 70%;
+    height: 64%;
     background-color: #1aa1c1;
+}
+
+#navigaiton{
+    width: 100%;   
+    height: 6%;
+    background-color: #0f7898;
+   
 }
 
 img{
     max-height: 30%;
     max-width: 30%;
     position: absolute;
-    top:100px;
-    left: 50px;
+    top:80px;
+    left: 60px;
 }
 
 #my_name{
@@ -31,3 +38,23 @@ img{
     left: 280px;
     top: 150px;
 }
+
+.menu_items {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    min-height: 30px;
+    display: inline-block;
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+   
+}
+#navigation_items{
+    padding-left: 40px;
+    margin-left: 20px;
+    width: 70%;
+    margin: 0 auto;
+     
+}
+
