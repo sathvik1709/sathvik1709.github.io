@@ -25,6 +25,8 @@ html, body{
 }
 
 img{
+    border: 1px solid #1aa1c1;
+    border-radius: 4px;
     max-height: 30%;
     max-width: 30%;
     position: absolute;
@@ -40,8 +42,10 @@ img{
 }
 
 .menu_item_div{
+    margin-top: 1px;
      display: inline-block;
     background: #bbd9f7;
+    border-radius: 2px;
 }
 
 .menu_items {
