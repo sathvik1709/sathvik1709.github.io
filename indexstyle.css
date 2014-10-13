@@ -67,3 +67,15 @@ img{
      
 }
 
+#my_details{
+     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    position: absolute;
+    top:85px;
+    left:216px;
+}
+
+.my_details_text{
+    margin: 0;
+    border: 2px solid balck;
+}
+
