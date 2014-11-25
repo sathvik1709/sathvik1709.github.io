@@ -29,14 +29,15 @@
     </nav>
     <div class="container" style="margin-top:50px;">
         <div style="margin-right:auto;margin-left:auto;width:80%;">
+
         <nav>
             Page:
             <ul class="pagination pagination-lg"> 
                 <li>
-                    <button type="button" class="btn btn-default">1</button>
+                    <button onclick="displaypage1()" id="page1btn" type="button" class="btn btn-default">1</button>
                 </li>
                 <li>
-                     <button type="button" class="btn btn-default">2</button>
+                     <button onclick="displaypage2()" id="page2btn" type="button" class="btn btn-default">2</button>
                 </li>
             </ul>
         </nav>
@@ -44,11 +45,6 @@
         <div style="margin-right:auto;margin-left:auto;width:80%">
              <canvas id="the-canvas" style="border:1px solid black;"/>
         </div>
-       
     </div>
-    
-    
-
 </body>
-
 </html>
