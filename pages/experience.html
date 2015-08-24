@@ -1,0 +1,13 @@
+<!-- Experience Section -->
+<md-subheader>Industrial Experience</md-subheader>
+<div id="experience_div">
+    <md-list>
+        <md-list-item ng-repeat="item in experience">
+            <div class="md-list-item-text">
+                <h4>{{ item.companyName }} - {{ item.experienceTitle }}</h4>
+                <p>{{item.start}} - {{item.end}}</p>
+                <p>{{item.description}}</p>
+            </div>
+        </md-list-item>
+    </md-list>
+</div>

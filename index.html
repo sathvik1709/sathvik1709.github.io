@@ -1,63 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="portfolioApp">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Sathvik Shivaprakash</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-	<script src="js/bootstrap.min.js"></script>
-<style>
-img{
-  
-    margin-left: auto;
-    margin-right: auto;
-}
+    <title>Sathvik | Portfolio</title>
 
-</style>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <meta name="viewport" content="initial-scale=1" />
+    <style type="text/css">
+        #main_content {}
+        
+        md-divider {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-66675260-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </head>
-<body> 
-      <!--style="color:orange;"  background-image: linear-gradient(rgba(100, 100, 100, 0.5),white);-->
 
-		
-    <nav class="navbar navbar-inverse" role="navigation">
-        <div class="container">
-            <p class="navbar-text">Sathvik Shivaprakash</p>
-            <a  href="#"><button type="button" class="btn btn-default navbar-btn">Home</button></a>
-            <a  href="projects.html"><button type="button" class="btn btn-success navbar-btn">Projects</button></a>
-            <a  href="resume.html"><button type="button" class="btn btn-success navbar-btn">Resume</button></a>
-        </div>
-    </nav>
-<div class="container" style="background-image: linear-gradient(rgba(100, 100, 100, 0.5),white);">    
-    <div class="row" style="margin-top:100px;">
-        <div class="col-md-4" >
-        <img src="profile_pic.JPG" class="img-rounded" style="max-height: 70%; max-width: 70%;
-                           display: block; margin-left: auto;margin-right: auto;">
-        </div>
-        <div class="col-md-8">
-        <h4>Hey there, I am Sathvik Shivaprakash</h4>
-        <p>Currently pursuing my Master's from The University of Texas at Arlington in Computer Science. I did my       Bachelor of Engineering in Computer science from B.N.M. Institute of Technology, Bangalore under Visvesvaraya Technological University.  
-        </p>
-        <p> I am a very highly motivated, self driven person with a clear vision of my goals. I would always like to take up challenging and complex problems and find the most efficient solution to it.  </p>
-        <p>From my childhood I was always fascinated by computers which made easy for me to choose my career path.             </p>
-        <p>Have a look at all my projects in the "Projects" section. Currently I am looking for an intern position.
-        Take a look at my resume in the "Resume" section. 
-        </p>
-            
-        </div>
+<body ng-controller="portfolioCtrl">
+    <div ng-controller="portfolioCtrl" layout="column">
+        <md-toolbar style="background-color:#2196F3;" class="md-medium-tall" layout="column" md-scroll-shrink="false">
+            <span flex></span>
+            <span layout="row" layout-padding>
+                <!--<md-button aria-label="Menu" class="menu" hide-gt-sm><i class="fa fa-bars"></i></md-button>-->
+                <div class="md-toolbar-tools" flex>
+                    <h2 class="md-flex" style="color:white">Sathvik Shivaprakash</h2>
+                    <span flex="20"></span>
+            <span flex="10"><md-button id="home_btn" ng-click="goToPage('/')"><p style="color:white;">Home</p></md-button></span>
+            <span flex="10"><md-button id="resume_btn" ng-click="goToPage('/experience')"><p style="color:white;">Experience</p></md-button></span>
+            <span flex="10"><md-button id="projects_btn" ng-click="goToPage('/projects')"><p style="color:white;">Projects</p></md-button></span>
+            <span flex="10"><md-button id="resume_btn" ng-click="goToPage('/resume')"><p style="color:white;">Resume</p></md-button></span>
     </div>
-    
-    <div class="row" style="margin-top:80px;" >
-        <div  style="margin-right:auto;margin-left:auto;width:50%;display:inline-flex;">
-            <h3  style="margin-right:auto;margin-left:auto;">Follow me on : </h3>
-            <img style="width:40px;height:40px;margin-top:auto;" src="icons/linkedin_follow.png" />
-            <img style="width:40px;height:40px;margin-top:auto;" src="icons/fb_follow.png" />
-            <img style="width:40px;height:40px;margin-top:auto;" src="icons/gplus_follow.png" />
-            <img style="width:40px;height:40px;margin-top:auto;" src="icons/twitter_follow.png" />
-            <img style="width:40px;height:40px;margin-top:auto;" src="icons/500px_follow.png" />
+    </span>
+    </md-toolbar>
+    <md-content layout="column" layout-padding id="main_content">
+        <div ng-view flex>
+
         </div>
-    </div>     
-</div>
+        <md-divider></md-divider>
+        <!-- Contact Section -->
+        <div id="contact_div">
+           
+        </div>
+    </md-content>
+    </div>
+    <!-- Angular Material Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
+    <script src="js/portfolio.js"></script>
 </body>
+
 </html>
+
+<!-- 
+References
+1. https://scotch.io/tutorials/single-page-apps-with-angularjs-routing-and-templating
+2. http://www.bossable.com/1338/angular-material-design-toolbar-examples/
+-->

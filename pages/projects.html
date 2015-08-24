@@ -1,0 +1,12 @@
+<!-- Projects Section -->
+<md-subheader>Academic Projects</md-subheader>
+<div id="projects_div">
+    <md-list>
+        <md-list-item ng-repeat="item in projects">
+            <div class="md-list-item-text">
+                <h4>{{ item.projectTitle }}</h4>
+                <p>{{item.projectDescription}}</p>
+            </div>
+        </md-list-item>
+    </md-list>
+</div>
