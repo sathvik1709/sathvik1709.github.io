@@ -25,9 +25,43 @@ app.config(function($routeProvider) {
     });
 });
 
-app.controller('portfolioCtrl', ['$scope', '$location', function($scope, $location) {
+app.controller('portfolioCtrl', ['$scope', '$location', '$window', function($scope, $location, $window) {
+
+    var linked_link = 'https://www.linkedin.com/pub/sathvik-shivaprakash/52/8b1/683';
+    var twitter_link = 'https://twitter.com/Sathvik1709';
+    var facebook_link = 'https://www.facebook.com/sathvikshivaprakash';
+    var googleplus_link = 'https://plus.google.com/+sathviks';
+    var youtube_link = 'https://www.youtube.com/user/sathvikshivaprakash';
+    
 
     $scope.imagePath = 'img/sathvik_photo.jpg';
+
+    // FAB speed dial attributes
+    $scope.fabSpeedDial = {
+        isOpen: false,
+        selectedDirection: 'left',
+        selectedMode: 'md-fling'
+    };
+
+    $scope.openSocialLink = function(link) {
+        switch (link) {
+            case 'linkedin':
+                $window.open(linked_link, '_blank');
+            break;
+            case 'twitter':
+                $window.open(twitter_link, '_blank');
+            break;
+            case 'facebook':
+                $window.open(facebook_link, '_blank');
+            break;
+            case 'googleplus':
+                $window.open(googleplus_link, '_blank');
+            break;
+            case 'youtube':
+                $window.open(youtube_link, '_blank');
+            break;
+        };
+    };
 
     $scope.projects = [
 
@@ -98,11 +132,10 @@ app.controller('portfolioCtrl', ['$scope', '$location', function($scope, $locati
         $location.path(path);
     };
 
-    $scope.experience = [
-    {
-        experienceTitle : 'Software Engieering Intern',
+    $scope.experience = [{
+        experienceTitle: 'Software Engieering Intern',
         companyName: 'INSZoom.com, Inc',
-        description : 'Involved in Integrating Fusebill Services, which brought about Automation of billing process. Worked on adding enhancements to the existing web application. Also involved in implementing NCache which brought about performance improvements to the entire application.',
+        description: 'Involved in Integrating Fusebill Services, which brought about Automation of billing process. Worked on adding enhancements to the existing web application. Also involved in implementing NCache which brought about performance improvements to the entire application.',
         start: 'June - 2015',
         end: 'August - 2015'
     }];
