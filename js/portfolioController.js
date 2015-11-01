@@ -88,11 +88,32 @@ app.controller('portfolioCtrl', ['$scope','$mdSidenav','$location', function($sc
     $scope.skills = [
         {
             type:'Programming languages',
-            skills:''
+            skills:'C#, Java, Python'
         },
         {
-
-        }
+            type:'Mobile technologies',
+            skills:'Android'
+        },
+        {
+            type:'Web technologies',
+            skills:'HTML5, CSS3, JavaScript, PHP, JSP, Servlets, jQuery, jQuery UI, Bootstrap, AJAX, REST services, Angular JS, Angular JS Material'
+        },
+        {
+            type:'Cloud Platforms',
+            skills:'Amazon Web Services(AWS) RDS, AWS Dynamo DB,  Hadoop'
+        },
+        {
+            type:'Version Control',
+            skills:'Git, GitHub, BitBucket'
+        },
+        {
+            type:'Development tools',
+            skills:'Eclipse, Android Studio, Visual Studio'
+        },
+        {
+            type:'Operating Systems',
+            skills:'Windows 7/8/8.1, Ubuntu'
+        },
     ];
 
 }]);

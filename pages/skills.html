@@ -1,12 +1,13 @@
 <div layout="column" layout-padding>
-    Coming soon!
-<!--    <div layout="row">
-        <div flex="30">
-            [flex="30"]
+    <div layout="column" ng-repeat="item in skills">
+        <div layout="row" layout-padding layout-align="center">
+            <div flex="30">
+                {{item.type}}
+            </div>
+            <div flex="70">
+                {{item.skills}}
+            </div>
         </div>
-        <div flex="70">
-            [flex="70"]
-        </div>
-
-    </div>-->
+        <md-divider></md-divider>
+    </div>
 </div>
