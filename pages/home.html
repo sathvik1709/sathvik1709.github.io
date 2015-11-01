@@ -1,13 +1,10 @@
-<!-- Home Section -->
-<div id="home_div">
-    <div layout="row" layout-align="center center">
-        <div flex="30">
-            <div layout="row" layout-align="center center" flex>
-                <img src="{{imagePath}}" alt="Sathvik Shivaprakash" style="max-width:250px;max-height:250px;">
-            </div>
-        </div>
-        <div flex="70">
-            <h2 class="md-title">Hey there, I am Sathvik Shivaprakash</h2>
+<div layout="column" layout-padding>
+    <div layout="row" >
+        <img layout-align="center" src="img/profile_pic.JPG" style="margin: auto;max-height:200px;max-width: 200px ">
+    </div>
+    <div layout="row">
+        <div flex layout-padding> <!--Content-->
+            <h2>Hey there, I am Sathvik Shivaprakash</h2>
             <p>
                 Currently pursuing my Master's from The University of Texas at Arlington in Computer Science. I did my Bachelor of Engineering in Computer science from B.N.M. Institute of Technology, Bangalore under Visvesvaraya Technological University.
             </p>
@@ -21,31 +18,5 @@
                 Have a look at all my projects in the "Projects" section. Currently I am looking for an intern position. Take a look at my resume in the "Resume" section.
             </p>
         </div>
-    </div>
-    <div class="lock-size" layout="row" layout-align="end end">
-        <md-fab-speed-dial md-open="fabSpeedDial.isOpen" md-direction="{{fabSpeedDial.selectedDirection}}" ng-class="fabSpeedDial.selectedMode">
-            <md-fab-trigger>
-                <md-button aria-label="menu" class="md-fab md-warn">
-                    <md-icon md-svg-src="img/icons/ic_contact.svg"></md-icon>
-                </md-button>
-            </md-fab-trigger>
-            <md-fab-actions>
-                <md-button aria-label="LinkedIn" class="md-fab md-raised md-mini" ng-click="openSocialLink('linkedin')">
-                    <md-icon md-svg-src="img/icons/linkedin.svg"></md-icon>
-                </md-button>
-                <md-button aria-label="twitter" class="md-fab md-raised md-mini" ng-click="openSocialLink('twitter')">
-                    <md-icon md-svg-src="img/icons/twitter.svg"></md-icon>
-                </md-button>
-                <md-button aria-label="facebook" class="md-fab md-raised md-mini" ng-click="openSocialLink('facebook')">
-                    <md-icon md-svg-src="img/icons/facebook.svg"></md-icon>
-                </md-button>
-                <md-button aria-label="Google Plus" class="md-fab md-raised md-mini" ng-click="openSocialLink('googleplus')">
-                    <md-icon md-svg-src="img/icons/google_plus.svg"></md-icon>
-                </md-button>
-                <md-button aria-label="Youtube" class="md-fab md-raised md-mini" ng-click="openSocialLink('youtube')">
-                    <md-icon md-svg-src="img/icons/youtube.svg"></md-icon>
-                </md-button>
-            </md-fab-actions>
-        </md-fab-speed-dial>
     </div>
 </div>
