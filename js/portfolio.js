@@ -7,7 +7,7 @@ var app = angular.module('portfolioApp', ["ngMaterial","ngRoute"]);
 app.config(function($mdThemingProvider) {
     $mdThemingProvider.theme('default')
         .primaryPalette('blue')
-        .accentPalette('blue-grey')
+        .accentPalette('deep-purple')
         .warnPalette('red');
 });
 
@@ -33,8 +33,8 @@ app.config(function($routeProvider){
             templateUrl: 'pages/skills.html',
             controller: 'portfolioCtrl'
         })
-        .when('/about',{
-            templateUrl: 'pages/about.html',
+        .when('/newstabs',{
+            templateUrl: 'pages/newstabs.html',
             controller: 'portfolioCtrl'
         });
 });
