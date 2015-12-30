@@ -93,6 +93,9 @@ app.controller('portfolioCtrl', ['$scope','$mdSidenav','$location', function($sc
         {
             type:'Mobile technologies',
             skills:'Android'
+        },{
+            type:'Database',
+            skills:'SQL, Stored Procedures'
         },
         {
             type:'Web technologies',
